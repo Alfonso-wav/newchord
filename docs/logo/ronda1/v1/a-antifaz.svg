@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img"><title>newchord A</title>
+<path fill="#070907" d="M200 114 L248 82 L238 118 Z M200 134 L246 166 L222 172 Z"/>
+<path fill="#5fff5f" d="M120 40 C172 40 212 76 212 124 C212 164 182 188 150 198 L148 220 Q148 236 120 236 Q92 236 92 220 L90 198 C58 188 28 164 28 124 C28 76 68 40 120 40 Z"/>
+<path fill="#070907" fill-rule="evenodd" d="M18 112 Q120 90 222 112 L216 148 Q170 156 140 138 Q120 128 100 138 Q70 156 24 148 Z M58 124 Q80 106 104 124 Q80 138 58 124 Z M136 124 Q160 106 182 124 Q160 138 136 124 Z"/>
+<circle fill="#070907" cx="81" cy="123" r="6"/><circle fill="#070907" cx="159" cy="123" r="6"/>
+<ellipse fill="#070907" cx="120" cy="222" rx="22" ry="12"/>
+</svg>

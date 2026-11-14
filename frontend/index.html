@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>cryptopo</title>
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+  <header>
+    <h1>cryptopo<span class="dim"> / panel</span></h1>
+    <div id="lights"></div>
+  </header>
+  <section class="box">
+    <div class="row">
+      <button id="server"></button>
+      <button id="funnel"></button>
+      <button id="call">Entrar a la llamada</button>
+    </div>
+    <div class="row" id="urlRow" hidden>
+      <code id="url"></code>
+      <button id="invite" class="primary" data-tip="Enlace de un solo uso que caduca en 24 horas. No lleva la clave de sala.">Copiar invitación</button>
+      <button id="whatsapp" data-tip="Abre WhatsApp con una invitación nueva ya escrita: eliges el chat y quien pulse el enlace entra.">WhatsApp</button>
+    </div>
+    <div class="row" id="approveRow" hidden>
+      <span id="approveText"></span>
+      <button id="approve" class="primary">Aprobar</button>
+    </div>
+    <p id="msg" role="alert" hidden></p>
+  </section>
+  <nav>
+    <button data-tab="sessions" class="on">Sesiones</button>
+    <button data-tab="logs">Logs</button>
+    <button data-tab="settings">Settings</button>
+  </nav>
+  <main>
+    <section id="sessions" class="tab">
+      <div id="pets">
+        <div id="rooms" aria-live="polite"></div>
+        <div id="gone"></div>
+      </div>
+    </section>
+    <section id="logs" class="tab" hidden>
+      <table>
+        <thead><tr><th>Hora</th><th>Evento</th><th>Nombre</th><th>IP</th><th>Detalle</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </section>
+    <section id="settings" class="tab" hidden>
+      <form id="form">
+        <label><span class="tip" tabindex="0" data-tip="Cambiar la clave desconecta a todos y hay que repartir una invitación nueva. Se guarda cifrada para tu cuenta de Windows.">Clave de sala</span> <input id="password" type="password" autocomplete="off" minlength="16" required></label>
+        <label class="check"><input id="show" type="checkbox"> Mostrar</label>
+        <button type="button" id="genKey">Generar clave nueva</button>
+        <label>Puerto <input id="port" type="number" min="1024" max="65535" required></label>
+        <label>Canales <input id="channels"></label>
+        <button class="primary">Guardar</button>
+        <button type="button" id="clearLogs" data-tip="Se guardan siempre, con nombres e IPs: no compartas la carpeta del panel.">Borrar sesiones y logs</button>
+        <h2><span class="tip" tabindex="0" data-tip="TURN es un relé: cuando dos personas no consiguen conectar directo (CGNAT, móvil, algunas fibras), el audio y el vídeo pasan por él, cifrados. Solo lo usa quien lo necesita. Uno u otro: activar uno apaga el otro.">TURN</span></h2>
+        <div class="row">
+          <button type="button" id="turnBuiltin" data-tip="Relé dentro del propio exe, sin configurar nada. Va por el Funnel (TCP), así que todo lo retransmitido pasa por tu conexión y con pérdidas la voz puede dar tirones. Bien para voz."></button>
+          <button type="button" id="turnOwn" data-tip="Tu propio coturn. La primera vez abre turn.json para poner urls y secret (o user y pass). Mejor para pantalla en alta resolución y para ocultar IPs con relayOnly."></button>
+        </div>
+      </form>
+    </section>
+  </main>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+node_modules/
+web/dist/
+cryptopo
+cryptopo.exe
+cryptopo-server.exe
+cryptopo-new.exe
+cryptopo.exe~
+build/bin/
+frontend/dist/
+frontend/src/wailsjs/
+frontend/package.json.md5
+*.tsbuildinfo
+SHA256SUMS.txt
+clave.txt
+*.db
+*.db-wal
+*.db-shm
+cryptopo.apk
+# Antes del cambio de nombre
+newchord
+newchord.exe
+newchord-server.exe
+newchord-new.exe
+newchord.exe~
+newchord.apk
+# Modelo del dictado: lo baja y comprueba web/scripts/stt-assets.mjs
+web/public/stt/

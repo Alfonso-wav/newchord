@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img"><title>newchord B</title>
+<path fill="#5fff5f" d="M24 156 C24 118 70 98 130 98 C170 98 198 112 216 130 L244 146 Q250 152 242 158 L214 168 C196 192 162 206 120 206 C64 206 24 190 24 156 Z M28 164 L8 176 L30 172 Z"/>
+<path fill="#5fff5f" stroke="#070907" stroke-width="7" stroke-linejoin="round" d="M146 184 C160 214 190 228 226 226 L214 216 L234 212 L218 204 L236 196 L212 190 L222 180 C196 182 170 176 146 184 Z"/>
+<path fill="#5fff5f" stroke="#070907" stroke-width="7" stroke-linejoin="round" d="M60 190 C56 206 50 216 42 226 L84 226 C86 214 88 202 90 192 Z"/>
+<path fill="#070907" fill-rule="evenodd" d="M150 104 Q190 106 224 132 L216 156 Q186 142 148 142 Z M174 128 Q190 116 206 132 Q190 140 174 128 Z"/>
+<circle fill="#070907" cx="190" cy="129" r="5"/>
+<path fill="#070907" d="M150 110 C130 100 108 96 84 98 L98 108 L80 116 C104 118 128 120 150 124 Z M150 128 C130 132 110 140 90 150 L106 152 L96 164 C116 154 134 146 150 140 Z"/>
+<ellipse fill="#070907" cx="243" cy="152" rx="9" ry="8"/>
+</svg>

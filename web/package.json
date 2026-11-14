@@ -1,0 +1,32 @@
+{
+  "name": "cryptopo-web",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "node scripts/stt-assets.mjs && tsc -b && vite build",
+    "typecheck": "tsc -b",
+    "test": "node --experimental-strip-types --disable-warning=ExperimentalWarning --test test/avc.test.mjs test/media.test.mjs test/e2e.test.mjs test/images.test.mjs test/vad.test.mjs",
+    "test:e2e": "npm run build && node --test --test-concurrency=1 e2e/p2p.e2e.mjs e2e/password.e2e.mjs e2e/invite.e2e.mjs e2e/security.e2e.mjs e2e/mesh.e2e.mjs e2e/builtin-turn.e2e.mjs e2e/extras.e2e.mjs",
+    "test:e2e:docker": "node --test e2e/relay.e2e.mjs",
+    "test:e2e:android": "node --test --test-concurrency=1 e2e/android.e2e.mjs",
+    "test:e2e:firefox": "npm run build && node --test --test-concurrency=1 e2e/firefox.e2e.mjs"
+  },
+  "dependencies": {
+    "@fontsource/jetbrains-mono": "^5.3.0",
+    "@fontsource/vt323": "^5.3.0",
+    "@huggingface/transformers": "^4.3.2",
+    "@sqlite.org/sqlite-wasm": "^3.54.1-build1",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "puppeteer-core": "^25.16.0",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.5"
+  }
+}
